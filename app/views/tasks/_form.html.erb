@@ -1,0 +1,47 @@
+<%= form_with(model: task) do |form| %>
+  <% if task.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+      <ul>
+        <% task.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :task_name, style: "display: block" %>
+    <%= form.text_field :task_name %>
+  </div>
+
+  <div>
+    <%= form.label :owner, style: "display: block" %>
+    <%= form.text_field :owner %>
+  </div>
+
+  <div>
+    <%= form.label :collaborate, style: "display: block" %>
+    <%= form.text_field :collaborate %>
+  </div>
+
+  <div>
+    <%= form.label :collaborate_company, style: "display: block" %>
+    <%= form.text_field :collaborate_company %>
+  </div>
+
+  <div>
+    <%= form.label :start_date, style: "display: block" %>
+    <%= form.date_field :start_date %>
+  </div>
+
+  <div>
+    <%= form.label :weekly_report_item, style: "display: block" %>
+    <%= form.rich_text_area  :weekly_report_item %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

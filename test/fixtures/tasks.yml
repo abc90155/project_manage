@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  task_name: MyString
+  owner: MyString
+  collaborate: MyString
+  collaborate_company: MyString
+  start_date: 2023-02-14
+  weekly_report_item: MyText
+
+two:
+  task_name: MyString
+  owner: MyString
+  collaborate: MyString
+  collaborate_company: MyString
+  start_date: 2023-02-14
+  weekly_report_item: MyText

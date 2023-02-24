@@ -1,0 +1,5 @@
+<%= form_with model: [ task, Comment.new ] do |form| %>
+    Your comment: <br>
+    <%= form.text_area :weekly_report_item, size: "20x5" %>
+    <%= form.submit %>
+  <% end %>

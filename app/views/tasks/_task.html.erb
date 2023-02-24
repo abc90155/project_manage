@@ -1,0 +1,30 @@
+<div id="<%= dom_id task %>">
+
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">專案名稱</th>
+      <th scope="col">專案負責人</th>
+      <th scope="col">合作部門</th>
+      <th scope="col">外部合作</th>
+      <th scope="col">開案日期</th>
+      <th scope="col">詳細內容</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr>
+      <th scope="row"> </th>
+      <td><%= task.task_name %></td>
+      <td><%= task.owner %></td>
+      <td><%= task.collaborate %></td>
+      <td><%= task.collaborate_company %></td>
+      <td><%= task.start_date %></td>
+      <td><%= task.weekly_report_item %></td>
+      
+    </tr>
+  </tbody>
+</table>
+
+
+</div>
