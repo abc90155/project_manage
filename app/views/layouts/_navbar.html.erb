@@ -7,22 +7,24 @@
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
 
-          <li><%= link_to "首頁",root_path , class: "nav-link px-2 text-white" %></li>
+          <li><%= link_to "首頁", root_path , class: "nav-link px-2 text-white" %></li>
           <li><a href="#" class="nav-link px-2 text-white">專案</a></li>
           <li><a href="#" class="nav-link px-2 text-white">合作廠商專區</a></li>
           <li><a href="#" class="nav-link px-2 text-white">About</a></li>
         </ul>
 
-        <div class="text-end">
+        <div class="mb-3">
           <% if current_user %>
-            <li>Welcome <%= current_user.email %> </li>
-            <%= button_to "登出", destroy_user_session_path, method: :delete %> 
-            <!--<%= button_to('登出', destroy_user_session_path, :method => :delete) %>-->
-            <%= button_to "修改密碼", edit_registration_path(:user)%> 
-            <%= link_to('修改密碼', edit_registration_path(:user)) %>
+            <li>歡迎 ,  <%= current_user.email %> </li>
+            <div class="d-flex justify-content-center">
+              <%= button_to "修改密碼", edit_registration_path(:user), method: :get , class:"btn btn-outline-danger"%>    |  
+              <%= button_to "登出", destroy_user_session_path, method: :delete , class:"btn btn-outline-warning" %>
+            </div>
           <% else %>
-            <%= link_to('註冊', new_registration_path(:user)) %>
-            <%= link_to('登入', new_session_path(:user)) %>
+            <div class="d-flex justify-content-center">
+              <%= button_to "註冊", new_registration_path(:user), method: :get , class:"btn btn-outline-danger"%>    |  
+              <%= button_to "登入", new_session_path(:user) , class:"btn btn-outline-warning" %>
+            </div>
           <% end %>
         </div>
       </div>

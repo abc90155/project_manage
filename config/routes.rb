@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   root :to => "tasks#index"
 
   get "tasks", to: "tasks#index"
-  get "sign_up", to: "registrations#new"
-  post "sign_up", to: "registrations#create"
+  #get "sign_up", to: "registrations#new"
+  #post "sign_up", to: "registrations#create"
   delete "logout", to: "sessions#destroy"
 end
