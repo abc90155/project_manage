@@ -1,9 +1,9 @@
-<h1>New task</h1>
+<h1 class="h1">New task</h1>
 
 <%= render "form", task: @task %>
 
 <br>
 
 <div>
-  <%= link_to "Back to tasks", tasks_path %>
+  <%= button_to "返回專案列表", tasks_path, method: :get , class:"btn btn-outline-primary" %>
 </div>

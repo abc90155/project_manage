@@ -1,8 +1,15 @@
 <%= render @task %>
 
 <div>
-  <%= link_to "Edit this task", edit_task_path(@task) %> |
-  <%= link_to "Back to tasks", tasks_path %>
-
-  <%= button_to "Destroy this task", @task, method: :delete %>
+<div class="d-flex justify-content-left">
+  <%= button_to "編輯專案", edit_task_path(@task), method: :get , class:"btn btn-outline-success" %> |
+  <%= button_to "返回專案列表", tasks_path, method: :get , class:"btn btn-outline-primary" %>
+</div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <%= button_to "刪除專案", @task, method: :delete , class:"btn btn-danger"%>
 </div>

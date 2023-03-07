@@ -4,7 +4,8 @@
 
 <br>
 
-<div>
-  <%= link_to "Show this task", @task %> |
-  <%= link_to "Back to tasks", tasks_path %>
+
+<div class="d-flex justify-content-left">
+  <%= button_to "放棄編輯", @task, method: :get , class:"btn btn-outline-primary" %> |
+  <%= button_to "返回專案列表", tasks_path, method: :get , class:"btn btn-outline-primary" %>
 </div>
