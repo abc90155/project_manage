@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => {
+    registrations: 'registrations'
+  }
   #resources :comments
   resources :tasks
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -9,7 +11,6 @@ Rails.application.routes.draw do
   root :to => "tasks#index"
 
   get "tasks", to: "tasks#index"
-  #get "sign_up", to: "registrations#new"
-  #post "sign_up", to: "registrations#create"
+  
   delete "logout", to: "sessions#destroy"
 end

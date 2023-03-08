@@ -8,6 +8,11 @@
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control', placeholder: 'AICenter@cch.com' %>
   </div>
 
+  <div class="mb-3">
+    <%= f.label :name , class: 'form-label'%><br />
+    <%= f.text_field :name, class: 'form-control', placeholder: '暱稱或是中文名 確認後不得修改 請謹慎取名' %>
+  </div>
+
   <div class="mb-3" >
     <%= f.label :password, class:"form-label" %>
     <%= f.password_field :password, autocomplete: "new-password" , class: 'form-control', placeholder: 'Password: 6 characters minimum' %>

@@ -15,7 +15,7 @@
 
         <div class="mb-3">
           <% if current_user %>
-            <li>歡迎 ,  <%= current_user.email %> </li>
+            <li>歡迎 ,  <%= current_user.name %> </li>
             <div class="d-flex justify-content-center">
               <%= button_to "修改密碼", edit_registration_path(:user), method: :get , class:"btn btn-outline-danger"%>    |  
               <%= button_to "登出", destroy_user_session_path, method: :delete , class:"btn btn-outline-warning" %>
